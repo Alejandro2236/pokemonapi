@@ -27,8 +27,16 @@ export class PokemonService {
     return data;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} pokemon`;
+  async findOne(id: number) {
+    const { data } = await firstValueFrom(
+      this.httpService.get(`https://pokeapi.co/api/v2/pokemon/${id}`).pipe(
+        catchError((error: AxiosError) => {
+          console.log(error)
+          throw 'An error happened!';
+        }),
+      ),
+    );
+    return data;
   }
 
   update(id: number, updatePokemonDto: UpdatePokemonDto) {
