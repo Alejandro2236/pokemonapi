@@ -17,7 +17,7 @@ export class PokemonService {
 
   async findAll() {
     const { data } = await firstValueFrom(
-      this.httpService.get('https://pokeapi.co/api/v2/pokemon?limit=100').pipe(
+      this.httpService.get('https://pokeapi.co/api/v2/pokemon?limit=300').pipe(
         catchError((error: AxiosError) => {
           console.log(error)
           throw 'An error happened!';

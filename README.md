@@ -26,6 +26,15 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Endpoints
+
+1. List all pokemons
+```
+GET /pokemon
+```
+
+
+
 ## Project setup
 
 ```bash
