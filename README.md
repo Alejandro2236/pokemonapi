@@ -33,6 +33,23 @@
 GET /pokemon
 ```
 
+2. Get pokemon by id 
+```
+GET /pokemon/{id}
+```
+
+3. Add pokemon to favorites
+```
+POST /pokemon/{id}/favorites
+```
+
+4. Compare pokemon stats 
+```
+GET /pokemon/{leftId}/compare/{rightId}
+```
+
+
+
 
 
 ## Project setup
